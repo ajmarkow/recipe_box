@@ -1,0 +1,17 @@
+<h1>New Recipe</h1>
+
+<%= form_for @recipe do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+    <%= f.label :rating %>
+  <%= f.number_field :rating, within: 1...6 %>
+      <br>
+  <br>
+      <%= f.label "Instructions" %>
+  <%= f.text_field :instruction, :size => 120 %>
+  <br>
+    <%= f.submit %>
+<% end %>
+<p><%= link_to "Back to Main", root_path %></p>

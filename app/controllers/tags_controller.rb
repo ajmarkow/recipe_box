@@ -4,7 +4,8 @@ class TagsController < ApplicationController
   end
 
   def new
-    # Code for new tag form goes here.
+    @tag = Tag.new
+    render :new
   end
 
   def create
