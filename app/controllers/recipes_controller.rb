@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @Recipes = Recipe.all
+    @Recipes = Recipe.all.order(rating: :desc)
     # Code for listing all recipes goes here.
   end
 
@@ -27,6 +27,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.find(@recipe.id)
     render :show
     # Code for showing a single recipe goes here.
   end

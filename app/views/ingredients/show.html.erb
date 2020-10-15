@@ -1,6 +1,4 @@
-<h1><%= @recipe.title %></h1>
-<h3><%= @recipe.category %></h3>
-<p><%= @recipe.instruction %></[p]>
+<h1>Ingredient For <span><%= @recipe.title %></span></h1>
 
 <p><%= link_to "Edit", edit_recipe_path(@recipe) %></p>
 <p><%= link_to "Delete", recipe_path(@recipe),

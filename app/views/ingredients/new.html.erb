@@ -5,6 +5,9 @@
   <%= f.text_field :name %>
   <%= f.label :quantity %>
   <%= f.text_field :quantity %>
+  <br>
+    <%= f.collection_select :recipe_id, Recipe.order(:title), :id, :title, include_blank: false %>
+
       <br>
     <%= f.submit %>
 <% end %>

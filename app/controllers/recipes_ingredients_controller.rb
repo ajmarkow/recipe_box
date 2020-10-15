@@ -5,6 +5,7 @@ class RecipesIngredientsController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @ingredient = Ingredient.new
     render :new
   end
 
@@ -14,6 +15,7 @@ class RecipesIngredientsController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    @ingredient = Ingredient.find(params[:recipe_id])
     render :edit
     # Code for edit recipe form goes here.
     # Code for edit recipe form goes here.

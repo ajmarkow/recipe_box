@@ -13,43 +13,49 @@
  *= require_tree .
  *= require_self
  */
-body {
-  background-color: black;
-  color: white;
-  font-size: 24px;
-  text-align: center;
-  text-shadow: 1px 1px black, 2px 2px, black, 3px 3px black, 4px 4px black,
-    5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black;
-  font-family: "Crimson Text", serif;
-  background: radial-gradient(
-      circle,
-      transparent 20%,
-      slategray 20%,
-      slategray 80%,
-      transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        slategray 20%,
-        slategray 80%,
-        transparent 80%,
-        transparent
-      )
-      50px 50px,
-    linear-gradient(#a8b1bb 8px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #a8b1bb 8px, transparent 8px) -4px 0;
-  background-color: slategray;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
-}
 h1 {
+  background: hsl(0, 50%, 45%);
+  text-shadow: 1px 1px white, 2px 2px white, 3px 3px white, 4px 4px white,
+    5px 5px rgb(231, 226, 226), 6px 6px white, 7px 7px white, 8px 8px white;
+  color:white
   font-size: 72px;
-  font-family: "Homemade Apple", cursive;
+  justify-content: center;
+  text-align:center;
+  font-family: "Hepta Slab", serif;
+  padding-bottom:4%;
+}
+body {
+  background: hsl(0, 50%, 45%);
+  font-size: 24px;
+  font-family: "Hepta Slab", serif;
+  color:rgb(18, 20, 20);
+  justify-content: center;
+  text-align: right;
+  margin-right:20%
+  font: weight 500;
+  padding-right:12%
 }
 input {
   padding: 6px 6px;
   line-height: 15px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+a:first-of-type {
+  font-weight: 72;
+  color: whitesmoke;
+}
+
+
+a {
+  font-weight: 36;
+  color: whitesmoke;
+}
+p {
+  padding-bottom: 6%;
+}
+
+.bullet{
+  color:whitesmoke;
 }

@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
   def index
-    @Ingredients = Ingredient.all
+    @Ingredients = Ingredient.all.order(quantity: :desc)
     # Code for listing all ingredients goes here.
   end
 
@@ -29,6 +29,7 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find(params[:id])
+    @recipe = Recipe.find(params[:id])
     render :show
     # Code for showing a single ingredient goes here.
   end
@@ -49,10 +50,10 @@ class IngredientsController < ApplicationController
     redirect_to ingredients_path
     # Code for deleting an ingredient goes here.
   end
-end
 
-private
+  private
 
-def ingredient_params
-  params.require(:ingredient).permit(:name, :quantity)
+  def ingredient_params
+    params.require(:ingredient).permit(:name, :quantity, :recipe_id)
+  end
 end

@@ -3,7 +3,8 @@
 <% if @Recipes.any? %>
   <ul>
     <% @Recipes.each do |recipe| %>
-      <%= link_to recipe.title, recipe_path(recipe) %>
+      <span class="bullet">	&#10149;  </span><%= link_to recipe.title, recipe_path(recipe) %>
+      <p>Rated <%= recipe.rating %>⭐️</p>
       <br>
     <% end %>
   </ul>
@@ -11,4 +12,4 @@
   <p>There are no Recipes yet.</p>
 <% end %>
 <p><%= link_to "Ingredients", ingredients_path %></p>
-<p><%= link_to "Create new recipe", new_recipe_path %></p>
+<p><%= link_to "New Recipe", new_recipe_path %></p>
